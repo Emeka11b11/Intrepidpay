@@ -781,8 +781,3 @@ button:hover::before {
         margin-left: -1px
     }
 }
-
-html {
-    transform: scale(1);
-    transform-origin: top left;
-}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,">
+    <title> Intrepid Pay | Home</title>
+    <link rel="icon" href="Favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet" />
+</head>
+
+
+<body>
+
+    <header class=" header ">
+        <a href="index.html" class="logo "> Intrepid Travel</a>
+        <div>
+            <nav aria-label="n-b" class="navbar ">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+            </nav>
+            <button aria-label="menu" class="hamburger">
+            <div class="bar"></div>
+        </button>
+        </div>
+    </header>
+    <nav aria-label="m-nav" class="mobile-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+    </nav>
+
+
+    <section class="Home ">
+        <div class="Home-content ">
+            <h1>Hi, Welcome to</h1>
+            <h3>Intrepid Payments</h3>
+            <p>Please contact your Intrepid agent to obtain your local representative account details, or select a preferred payment option below.</p>
+            <p></p>
+            <div class="btn-box ">
+                <a href="#" id="openPayment">
+                    <img src="visa.jpg" alt="visa " class="visa">
+                </a>
+                <a href="Bitcoin.html">
+                    <img src="bitcoin.jpg" alt="btc " class="bitcoin ">
+                </a>
+
+            </div>
+
+            <div class="Home-sci ">
+                <a href="https://x.com/Intrepid_Travel?t=aDzi_2MJ5XHk6mPnMdEzvw&s=09"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.facebook.com/intrepidtravel"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/intrepidtravel?igsh=YzljYTk1ODg3Zg=="><i class='bx bxl-instagram'></i></a>
+            </div>
+
+            <span class="Home-imgHover "></span>
+    </section>
+
+    <script>
+        document.getElementById('openPayment').addEventListener('click', function() {
+            // Set flag and redirect to popup
+            localStorage.setItem('paymentOverlay', 'true');
+            window.location.href = 'popup.html';
+        });
+    </script>
+
+    <script src="main.js"></script>
+    <script>
+        window.$zoho = window.$zoho || {};
+        $zoho.salesiq = $zoho.salesiq || {
+            ready: function() {}
+        }
+    </script>
+    <script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq10c960751548cac5f4528c37081e5b2ed1e99f0086f8b5b2cb905be119d083ee" defer></script>
+</body>
+
+</html>

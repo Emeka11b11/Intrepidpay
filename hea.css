@@ -1,0 +1,228 @@
+ /* POPUP STYLES */
+ 
+ .payment-overlay {
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background: rgba(0, 0, 0, 0.6);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     z-index: 1000;
+     opacity: 0;
+     visibility: hidden;
+     transition: all 0.3s ease;
+     padding: 20px;
+ }
+ 
+ .payment-overlay.active {
+     opacity: 1;
+     visibility: visible;
+ }
+ 
+ .payment-container {
+     background: white;
+     border-radius: 12px;
+     width: 60%;
+     max-width: 500px;
+     height: 565px;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+     transform: translateY(20px);
+     transition: all 0.3s ease;
+     overflow: hidden;
+     display: flex;
+     flex-direction: column;
+ }
+ 
+ .payment-overlay.active .payment-container {
+     transform: translateY(0);
+ }
+ /* HEADER */
+ 
+ .payment-header {
+     padding: 20px;
+     background: linear-gradient(135deg, #667eea, #764ba2);
+     color: white;
+     position: relative;
+     flex-shrink: 0;
+ }
+ 
+ .payment-header h2 {
+     font-size: 22px;
+     margin-bottom: 5px;
+ }
+ 
+ .payment-close {
+     position: absolute;
+     top: 15px;
+     right: 15px;
+     background: none;
+     border: none;
+     color: white;
+     font-size: 24px;
+     cursor: pointer;
+     line-height: 1;
+ }
+ /* FORM STYLES */
+ 
+ .payment-form {
+     padding: 20px;
+     overflow-y: auto;
+     flex-grow: 1;
+ }
+ 
+ .form-group {
+     margin-bottom: 15px;
+ }
+ 
+ .form-group label {
+     display: block;
+     margin-bottom: 8px;
+     font-size: 14px;
+     color: #555;
+     font-weight: 500;
+ }
+ 
+ .form-group input,
+ .form-group select {
+     width: 100%;
+     padding: 12px 15px;
+     border: 1px solid #ddd;
+     border-radius: 8px;
+     font-size: 15px;
+     transition: all 0.3s;
+ }
+ 
+ .form-group input:focus,
+ .form-group select:focus {
+     border-color: #667eea;
+     outline: none;
+     box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+ }
+ /* BILLING TOGGLE */
+ 
+ .billing-toggle {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     cursor: pointer;
+     padding: 12px 0;
+     border-top: 1px solid #eee;
+     margin-top: 10px;
+ }
+ 
+ .billing-toggle span {
+     font-weight: 600;
+     color: #667eea;
+ }
+ 
+ .billing-toggle i {
+     transition: transform 0.3s;
+ }
+ 
+ .billing-toggle.active i {
+     transform: rotate(180deg);
+ }
+ /* BILLING FIELDS */
+ 
+ .billing-fields {
+     max-height: 0;
+     overflow: hidden;
+     transition: max-height 0.3s ease;
+ }
+ 
+ .billing-fields.active {
+     max-height: 500px;
+ }
+ 
+ .form-row {
+     display: flex;
+     gap: 15px;
+ }
+ 
+ .form-row .form-group {
+     flex: 1;
+ }
+ /* FOOTER */
+ 
+ .payment-footer {
+     padding: 20px;
+     border-top: 1px solid #eee;
+     text-align: center;
+     flex-shrink: 0;
+ }
+ 
+ .submit-btn {
+     background: linear-gradient(135deg, #667eea, #764ba2);
+     color: white;
+     border: none;
+     padding: 14px 28px;
+     border-radius: 8px;
+     font-size: 16px;
+     font-weight: 600;
+     cursor: pointer;
+     width: 100%;
+     transition: all 0.3s;
+ }
+ 
+ .submit-btn:hover {
+     opacity: 0.9;
+ }
+ 
+ .secure-note {
+     font-size: 13px;
+     color: #888;
+     margin-top: 15px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 5px;
+ }
+ /* VERIFICATION MODAL */
+ 
+ .verification-modal {
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background: rgba(0, 0, 0, 0.7);
+     display: none;
+     justify-content: center;
+     align-items: center;
+     z-index: 1000;
+ }
+ 
+ .verification-box {
+     background: white;
+     padding: 25px;
+     border-radius: 12px;
+     width: 90%;
+     max-width: 400px;
+     text-align: center;
+ }
+ 
+ .verification-input {
+     width: 100%;
+     padding: 15px;
+     margin: 20px 0;
+     font-size: 16px;
+     border: 2px solid #ddd;
+     border-radius: 8px;
+     text-align: center;
+ }
+ /* RESPONSIVE ADJUSTMENTS */
+ 
+ @media (max-width: 750px) {
+     .form-row {
+         flex-direction: column;
+         gap: 0;
+     }
+     .payment-container {
+         height: 85vh;
+         max-height: 700px;
+         width: 100%;
+     }
+ }
